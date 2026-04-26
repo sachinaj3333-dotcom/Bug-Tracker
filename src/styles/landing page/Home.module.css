@@ -1,0 +1,39 @@
+.hero_section {
+    height: 30rem;
+    align-content: center;
+}
+
+.tagline_one {
+    font-size: 3.7rem;
+    /* font-weight: bold; */
+    font-family: sans-serif;
+}
+
+.tagline_two {
+    font-size: 3.4rem;
+    font-weight: bold;
+    /* color: #A5B4FC; */
+}
+
+.subtext {
+    font-size: 1.15rem;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signup_btn {
+    background-color: #1868DB;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signup_btn:hover {
+    background-color: #123263;
+    color: white;
+
+}

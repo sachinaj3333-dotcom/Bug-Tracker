@@ -1,0 +1,52 @@
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1868DB;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title:hover {
+    color: #1868DB !important;
+}
+
+.nav_item{
+    font-size: 0.9rem !important;
+    color: black !important;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav_item:hover{
+    color: #1868DB !important;
+}
+
+.search_btn {
+    border: 1px solid #1869db2e !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.search_btn:hover {
+    background-color: #1868DB !important;
+    color: white !important;
+}
+
+.search_form {
+    border-right: 1px solid rgba(128, 128, 128, 0.332) !important;
+}
+
+.signin {
+    text-decoration: none;
+    color: #1868DB;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.2rem;
+
+}
+
+.signin:hover {
+    background-color: #F1F2F4;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.2rem;
+}
