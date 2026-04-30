@@ -40,7 +40,7 @@ const Navbar = () => {
                             </svg></button>
                         </form>
 
-                        <Link className={`${Styles.signin} ms-3`}>Sign in</Link>
+                        <Link className={`${Styles.signin} ms-3`} to={'/signin'}>Sign in</Link>
                     </div>
                 </div>
             </nav>

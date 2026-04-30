@@ -32,7 +32,7 @@ const SigninForm = () => {
                 <div className="col-12">
                     <button type="submit" className="btn btn-primary w-100">Sign in</button>
                     <p className={` text-end mt-2`}><Link to={"#"} className={`text-decoration-none`}>Forgot password?</Link></p>
-                    <p className='text-center'>Don't have an account? <Link to={"#"}>Sign up</Link></p>
+                    <p className='text-center'>Don't have an account? <Link to={"/signup"}>Sign up</Link></p>
                 </div>
             </form>
         </>
