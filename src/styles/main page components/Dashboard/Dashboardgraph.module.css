@@ -1,0 +1,9 @@
+.graph_name {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-weight: 500;
+}
+
+.graph_card {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}

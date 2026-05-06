@@ -43,6 +43,7 @@ const signInHelper = () => {
         if (isValid) {
             dispatch(signInUser(formValue));
             setFormValue(initialState);
+            navigate("/")
         } else {
             // add toaster
         }

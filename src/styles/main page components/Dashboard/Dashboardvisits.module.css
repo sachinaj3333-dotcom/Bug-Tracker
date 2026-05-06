@@ -1,0 +1,60 @@
+.visit_card {
+    border-color: rgba(128, 128, 128, 0.242);
+    padding: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.main_col {
+    width: 15rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.numbers {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.name {
+    font-size:  x-small;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.comparison {
+    font-size: xx-small;
+}
+
+.project_logo {
+    background-color: #E9F0FD;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    color: #1868DB;
+}
+
+.tasks_logo {
+    background-color: #E5F7EF;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    color: #1AC76F;
+}
+
+
+.progress_logo {
+    background-color: #F4F1FE;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    color: #8E57FC;
+}
+
+.team_member_logo {
+    background-color: #E0F6FB;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    color: #12B9D6;
+}

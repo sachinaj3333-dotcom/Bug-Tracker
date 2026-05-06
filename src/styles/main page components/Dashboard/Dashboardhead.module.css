@@ -1,0 +1,55 @@
+.page_name {
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.page_intro {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: 500;
+}
+
+.search_input {
+    border: 1px solid rgba(128, 128, 128, 0.242);
+    width: 15rem;
+}
+
+.search_input:focus {
+    box-shadow: none;
+    border-color: #1868DB;
+}
+
+.bell_icon {
+    padding-top: 0.3rem;
+    padding-bottom: 0.7rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    border: 1px solid rgba(128, 128, 128, 0.242);
+    background-color: #FFFFFF;
+    margin-left: 1rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+}
+
+.bell_icon:hover {
+    background-color: #F1F2F4;
+}
+
+.add_project_btn {
+    margin-left: 1rem;
+    padding: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: small;
+    border-radius: 0.5rem;
+    background-color: #105DFB;
+    border: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.add_project_btn:hover {
+    background-color: #1558BC;
+    /* transition: all 0.5s linear; */
+}
