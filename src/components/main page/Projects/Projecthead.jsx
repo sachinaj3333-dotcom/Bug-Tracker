@@ -1,17 +1,17 @@
 import React from 'react'
-import Styles from "../../../styles/main page components/Dashboard/Dashboardhead.module.css";
 import { Link } from 'react-router-dom';
+import Styles from "../../../styles/main page components/Projects/Projecthead.module.css";
 
-const Dashboardhead = () => {
+const Projecthead = () => {
     return (
         <>
             <div className="row">
                 <div className="col-lg-6">
                     <p className={`${Styles.page_name} mb-1`}>
-                        Dashboard
+                        Projects
                     </p>
                     <p className={`${Styles.page_intro} text-muted mb-0`}>
-                        Welcome back, User! Here's what's happening with your projects.
+                        Manage and oversee all your projects in one place.
                     </p>
                 </div>
                 <div className="col-lg-6 g-0 d-flex justify-content-end ">
@@ -34,4 +34,4 @@ const Dashboardhead = () => {
     )
 }
 
-export default Dashboardhead
+export default Projecthead;
