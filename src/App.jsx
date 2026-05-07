@@ -8,6 +8,8 @@ import Signin from './pages/auth/Signin.jsx'
 import { Route, Routes } from 'react-router-dom'
 import Sidebar from './pages/main page/Sidebar.jsx'
 import Dashboard from './pages/main page/Dashboard.jsx'
+import Projects from './pages/main page/Projects.jsx'
+import Tasks from './pages/main page/Tasks.jsx'
 
 function App() {
 
@@ -36,6 +38,8 @@ function App() {
           <div className="col-10" style={{height: "100vh ", overflow: "auto"}}>
             <Routes>
               <Route path='/' element={<Dashboard/>}/>
+              <Route path='/projects' element={<Projects/>}/>
+              <Route path='/tasks' element={<Tasks/>}/>
             </Routes>
           </div>
         </div>

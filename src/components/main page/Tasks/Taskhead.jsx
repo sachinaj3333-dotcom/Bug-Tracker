@@ -1,17 +1,17 @@
 import React from 'react'
-import Styles from "../../../styles/main page components/Dashboard/Dashboardhead.module.css";
+import Styles from "../../../styles/main page components/Tasks/Taskhead.module.css";
 import { Link } from 'react-router-dom';
 
-const Dashboardhead = () => {
+const Taskhead = () => {
     return (
         <>
             <div className="row">
                 <div className="col-lg-6">
                     <p className={`${Styles.page_name} mb-1`}>
-                        Dashboard
+                        Tasks
                     </p>
                     <p className={`${Styles.page_intro} text-muted mb-0`}>
-                        Welcome back, User! Here's what's happening with your projects.
+                        Manage and track all tasks across your projects.
                     </p>
                 </div>
                 <div className="col-lg-6 g-0 d-flex justify-content-end ">
@@ -25,7 +25,7 @@ const Dashboardhead = () => {
                     </span>
                     <span>
                         <Link>
-                            <button className={`${Styles.add_project_btn} me-2`}>+ New Project</button>
+                            <button className={`${Styles.add_task_btn} me-2`}>+ New Task</button>
                         </Link>
                     </span>
                 </div>
@@ -34,4 +34,4 @@ const Dashboardhead = () => {
     )
 }
 
-export default Dashboardhead
+export default Taskhead;
