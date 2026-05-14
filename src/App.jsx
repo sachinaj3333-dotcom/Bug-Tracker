@@ -10,6 +10,7 @@ import Sidebar from './pages/main page/Sidebar.jsx'
 import Dashboard from './pages/main page/Dashboard.jsx'
 import Projects from './pages/main page/Projects.jsx'
 import Tasks from './pages/main page/Tasks.jsx'
+import Board from './pages/main page/Board.jsx'
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
               <Route path='/' element={<Dashboard/>}/>
               <Route path='/projects' element={<Projects/>}/>
               <Route path='/tasks' element={<Tasks/>}/>
+              <Route path='/board' element={<Board/>}/>
             </Routes>
           </div>
         </div>
