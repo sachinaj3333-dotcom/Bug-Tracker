@@ -1,6 +1,7 @@
 import React from 'react'
 import Taskhead from '../../components/main page/Tasks/Taskhead.jsx';
 import Taskvisits from '../../components/main page/Tasks/Taskvisits.jsx';
+import Taskboard from '../../components/main page/Tasks/Taskboard.jsx';
 
 const Tasks = () => {
   return (
@@ -11,6 +12,7 @@ const Tasks = () => {
 
         <div className="p-3" style={{backgroundColor: "#FAFBFE"}}>
             <Taskvisits/>
+            <Taskboard/>
         </div>
     </>
   )

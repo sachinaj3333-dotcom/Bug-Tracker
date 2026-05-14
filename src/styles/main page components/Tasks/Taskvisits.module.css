@@ -26,7 +26,7 @@
     font-size: xx-small;
 }
 
-.project_logo {
+.task_logo {
     background-color: #E9F0FD;
     padding: 1rem;
     padding-bottom: 1.5rem;
@@ -34,27 +34,35 @@
     color: #1868DB;
 }
 
-.tasks_logo {
-    background-color: #E5F7EF;
+.todo_logo {
+    background-color: #F1EDFD;
     padding: 1rem;
     padding-bottom: 1.5rem;
     border-radius: 0.5rem;
-    color: #1AC76F;
+    color: #7D3FFC;
 }
 
 
-.progress_logo {
-    background-color: #F4F1FE;
+.inprogress_logo {
+    background-color: #FEF7E9;
     padding: 1rem;
     padding-bottom: 1.5rem;
     border-radius: 0.5rem;
-    color: #8E57FC;
+    color: #FE9607;
 }
 
-.team_member_logo {
-    background-color: #E0F6FB;
+.in_review_logo {
+    background-color: #F2EDFE;
     padding: 1rem;
     padding-bottom: 1.5rem;
     border-radius: 0.5rem;
-    color: #12B9D6;
+    color: #6527F6;
+}
+
+.complete_logo {
+    background-color: #ECF9E9;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    color: #0FAB1C;
 }

@@ -122,31 +122,30 @@ const Projectboard = () => {
                                         </svg>
                                     </span></td>
                                 </tr>
-                                <tr>
-                                    <td className='align-content-center'><span className={`text-muted ${Styles.pagination_detail}`}>showing 1 to 5 of 24 projects</span></td>
-                                    <td className='align-content-center' colSpan={5}></td>
-                                    <td className='align-content-center'>
-                                        <nav aria-label="Page navigation example">
-                                            <ul class="pagination">
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Previous">
-                                                        <span aria-hidden="true">&laquo;</span>
-                                                    </a>
-                                                </li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Next">
-                                                        <span aria-hidden="true">&raquo;</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
+                        <div className="card-body d-flex align-content-center pb-0">
+                            <span className={`${Styles.pagination_detail} text-muted align-content-top`}>showing 1 to 5 of 24 projects</span>
+                            <span className='ms-auto mb-0'>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
