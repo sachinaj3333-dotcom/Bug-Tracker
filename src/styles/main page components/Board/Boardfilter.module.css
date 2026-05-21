@@ -1,0 +1,77 @@
+.dropdown_btn {
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.242) !important;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    font-size: smaller;
+    font-weight: 500;
+}
+
+.dropdown_btn:focus {
+    border: none !important;
+}
+
+.status {
+    border: 1px solid rgba(128, 128, 128, 0.242);
+    border-radius: 0.4rem;
+    font-size: smaller;
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.status_name {
+    border-right: 1px solid rgba(128, 128, 128, 0.242);
+    border-radius: 0.4rem 0rem 0rem 0.4rem;
+}
+
+.status_color {
+    border-radius: 0rem 0.4rem 0.4rem 0rem;
+}
+
+.todo_task {
+    width: 10px;
+    height: 10px;
+    background-color: #0B60FF;
+    border-radius: 50%;
+}
+
+.inprogress_task {
+    width: 10px;
+    height: 10px;
+    background-color: #FEA511;
+    border-radius: 50%;
+}
+
+
+.inreview_task {
+    width: 10px;
+    height: 10px;
+    background-color: #6E09F1;
+    border-radius: 50%;
+}
+
+
+.done_task {
+    width: 10px;
+    height: 10px;
+    background-color: #0CA046;
+    border-radius: 50%;
+}
+
+.status_btn {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.btn_name:focus {
+    border: none !important;
+    font-size: smaller;
+}
+
+.btn_work {
+    border: none !important;
+    font-size: smaller;
+    font-weight: 500;
+}
+
+.priority_btn {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}

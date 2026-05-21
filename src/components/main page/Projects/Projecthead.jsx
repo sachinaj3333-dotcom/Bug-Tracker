@@ -24,9 +24,7 @@ const Projecthead = () => {
                         </svg></span>
                     </span>
                     <span>
-                        <Link>
-                            <button className={`${Styles.add_project_btn} me-2`}>+ New Project</button>
-                        </Link>
+                        <button className={`${Styles.add_project_btn} me-2`} data-bs-toggle="modal" data-bs-target="#addProjectid">+ New Project</button>
                     </span>
                 </div>
             </div>

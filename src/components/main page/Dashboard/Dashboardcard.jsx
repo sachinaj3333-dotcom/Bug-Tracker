@@ -24,7 +24,7 @@ const Dashboardcard = () => {
                                             <p className={`${Styles.project_type} text-muted mb-0`}>Web Development</p>
                                         </div>
                                         <div className="col-6 d-inline-flex align-items-center">
-                                            <progress value={45} max={100} className='w-75' /><span className={`ms-2 ${Styles.project_progress}`}>45%</span> <span className={`${Styles.project_opt} ms-2`}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                            <progress value={45} max={100} className='w-75' /><span className={`ms-2 ${Styles.project_progress}`}>45%</span> <span className={`${Styles.project_opt} ms-2`}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-three-dots-vertical" viewBox="0 0 16 16">
                                                 <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
                                             </svg></span>
                                         </div>
