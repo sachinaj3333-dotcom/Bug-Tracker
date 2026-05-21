@@ -14,12 +14,12 @@
     background-color: #FAFBFE;
 }
 
-.sidebar_menu_list{
+.sidebar_menu_list {
     list-style: none;
     padding: 0;
 }
 
-.sidebar_menu_name{
+.sidebar_menu_name {
     color: black;
     font-weight: 500;
     padding: 0.5rem;
