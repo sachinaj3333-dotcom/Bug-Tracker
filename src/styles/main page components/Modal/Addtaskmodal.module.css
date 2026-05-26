@@ -1,0 +1,221 @@
+.addtask_icon {
+    background-color: #E6EDFD;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;
+    color: #3966F4;
+}
+
+.modal_name {
+    font-weight: 600 !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.modal_description {
+    font-size: smaller;
+    font-weight: 500;
+}
+
+.form_label {
+    font-size: smaller;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input_field {
+    height: 2rem;
+}
+
+.input_field:focus {
+    box-shadow: none !important;
+}
+
+.task_description_input:focus{
+    box-shadow: none !important;
+}
+
+.dropdown {
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    border: 1.5px solid #E6EDFD;
+    /* box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: samller !important;
+    cursor: pointer;
+}
+
+.dropdown_toggle::after {
+    margin-left: 7.5rem !important;
+}
+
+.dropdown_toggle_tasktype::after {
+    margin-left: 7rem !important;
+}
+.dropdown_toggle_taskpriority::after {
+    margin-left: 7.8rem !important;
+}
+
+
+.dropdown_menu {
+    position: relative !important;
+    transform: translate3d(0px, 10px, 0px) !important;
+    border: none !important;
+}
+
+.dropdown_item {
+    border-radius: 0.5rem;
+}
+
+.dropdown_item:active {
+    background-color: rgba(128, 128, 128, 0.749);
+}
+
+.task_type {
+    font-size: small;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.type_description {
+    font-size: x-small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+.dropdown_item:hover {
+    background-color: #F4F8FE !important;
+    /* border: 1px solid #0E4AE3 !important; */
+    border-radius: 0.5rem;
+}
+
+.priority_type {
+    font-size: small;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.priority_description {
+    font-size: x-small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+.priority_condition_highest {
+    background-color: #FEE6E7;
+    color: #FE6666;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 1px;
+    border-radius: 0.4rem;
+    margin-left: 6rem;
+}
+
+.priority_condition_high {
+    background-color: #FEE5D7;
+    color: #F58C59;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 1px;
+    border-radius: 0.4rem;
+    margin-left: 7.6rem;
+}
+
+.priority_condition_medium {
+    background-color:#FFF4DC;
+    color: #FBC85F;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 1px;
+    border-radius: 0.4rem;
+    margin-left: 5rem;
+}
+
+.priority_condition_low {
+    background-color:#DDF7E9;
+    color: #109545;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 1px;
+    border-radius: 0.4rem;
+    margin-left: 8.1rem;
+}
+
+.priority_condition_lowest {
+    background-color:#E3F2FE;
+    color: #6C92FD;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 1px;
+    border-radius: 0.4rem;
+    margin-left: 6rem;
+}
+
+.status_todo_color {
+    width: 10px;
+    height: 10px;
+    background-color: #0B60FF;
+    border-radius: 50%;
+}
+
+.status_inprogress_color {
+    width: 10px;
+    height: 10px;
+    background-color: #FDAD30;
+    border-radius: 50%;
+}
+
+.status_inreview_color {
+    width: 10px;
+    height: 10px;
+    background-color: #A10DF9;
+    border-radius: 50%;
+}
+
+.status_blocked_color {
+    width: 10px;
+    height: 10px;
+    background-color: #FE1625;
+    border-radius: 50%;
+}
+
+.status_done_color {
+    width: 10px;
+    height: 10px;
+    background-color: #0FCC3E;
+    border-radius: 50%;
+}
+
+.dropdown_toggle_select_assignee::after {
+    margin-left: 23rem !important;
+}
+
+.profile_image{
+    border-radius: 100%;
+}
+
+.create_task_btn {
+    background-color: #0138FD !important;
+    color: white;
+}
+
+.cancel_btn {
+    border: 2px solid #E6EDFD;
+}
+
+.cancel_btn:hover {
+    border: 2px solid #E6EDFD;
+    background-color: #E6EDFD;
+    color: black;
+}
+
+
+.create_task_btn:hover {
+    background-color: #032fce !important;
+    color: white;
+}

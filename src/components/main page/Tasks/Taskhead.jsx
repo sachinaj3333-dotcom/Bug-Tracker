@@ -25,7 +25,7 @@ const Taskhead = () => {
                     </span>
                     <span>
                         <Link>
-                            <button className={`${Styles.add_task_btn} me-2`}>+ New Task</button>
+                            <button className={`${Styles.add_task_btn} me-2`} data-bs-toggle="modal" data-bs-target="#addTaskid">+ New Task</button>
                         </Link>
                     </span>
                 </div>
