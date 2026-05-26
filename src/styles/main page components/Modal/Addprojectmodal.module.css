@@ -159,6 +159,10 @@
     border-radius: 0.5rem;
 }
 
+.dropdown_item:active {
+    color: black !important;
+}
+
 .icon {
     -webkit-text-stroke: 0.5px;
 }
