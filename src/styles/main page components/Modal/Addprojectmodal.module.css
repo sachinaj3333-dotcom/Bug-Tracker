@@ -36,15 +36,17 @@
 }
 
 .project_icon {
-    /* background-color: red; */
-    /* padding: 1rem; */
-    padding-bottom: 1rem;
+    /* padding-bottom: 0.9rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 0.7rem;
+    padding-top: 0.7rem; */
+    width: 50px !important;
+    height: 50px !important;
     border: 2px solid #E6EDFD;
     border-radius: 0.5rem;
     cursor: pointer;
+    font-size: large;
+    display: inline-block;
 }
 
 .project_preview_icon {
@@ -96,16 +98,22 @@
 }
 
 .dropdown_toggle::after {
-    margin-left: 8rem !important;
+    position: absolute;
+    left: 30rem;
+    top: 1.3rem;
 }
 
 .dropdown_toggle_second::after {
-    margin-left: 10rem !important;
+    position: absolute;
+    left: 30rem;
+    top: 1.3rem;
 }
 
 
 .dropdown_toggle_third::after {
-    margin-left: 15rem !important;
+    position: absolute;
+    left: 30rem;
+    top: 1.3rem;
 }
 
 .dropdown_menu {
@@ -165,4 +173,11 @@
 
 .icon {
     -webkit-text-stroke: 0.5px;
+}
+
+.icon_dropupmenu {
+    position: absolute;
+    left: -23rem !important;
+    bottom: 1.35rem !important;
+    height: 15rem;
 }
