@@ -12,9 +12,22 @@ const initialState = {
         color: "",
         bgColor: "",
     },
-    projectColor: "#174AFB",
-    projectType: "",
-    projectPrivacy: "",
+    projectColor: {
+        color: "",
+        bgColor: "",
+    },
+    projectType: {
+        id: "1",
+        name: "web Application",
+        description: "Frontend & backend",
+        iconClass: "bi bi-globe",
+    },
+    projectPrivacy: {
+        id: "1",
+        name: "Private",
+        description: "Only members can view and access this project.",
+        iconClass: "bi bi-lock",
+    },
     teamMembers: "",
     ownerId: "",
     projectStatus: "",
@@ -113,42 +126,42 @@ const addProjectHelper = () => {
         {
             id: 1,
             colorCode: "#174AFB",
-            backgroundColorCode: "#1748fb62",
+            backgroundColorCode: "#E8EEFF",
         },
         {
             id: 2,
             colorCode: "#7C4EF4",
-            backgroundColorCode: "#7d4ef460",
+            backgroundColorCode: "#F1EBFF",
         },
         {
             id: 3,
             colorCode: "#20BA75",
-            backgroundColorCode: "#20ba7567",
+            backgroundColorCode: "#E8F8F1",
         },
         {
             id: 4,
             colorCode: "#FCA917",
-            backgroundColorCode: "#fca81764",
+            backgroundColorCode: "#FFF5E1",
         },
         {
             id: 5,
             colorCode: "#F94045",
-            backgroundColorCode: "#f940466c",
+            backgroundColorCode: "#FFE9EA",
         },
         {
             id: 6,
             colorCode: "#F74983",
-            backgroundColorCode: "#f749836c",
+            backgroundColorCode: "#FFEAF1",
         },
         {
             id: 7,
             colorCode: "#139FCA",
-            backgroundColorCode: "#139fca6b",
+            backgroundColorCode: "#E7F7FC",
         },
         {
             id: 8,
             colorCode: "#8F98AB",
-            backgroundColorCode: "#8f98ab69",
+            backgroundColorCode: "#F1F3F7",
         },
     ]
 
@@ -237,17 +250,9 @@ const addProjectHelper = () => {
     const projectStore = useSelector((state) => state.project);
     const dispatch = useDispatch();
 
-    const [projectPrivacy, setProjectPrivacy] = useState("Choose who can view and access the project.");
+    const [projectPrivacy, setProjectPrivacy] = useState(null);
 
-    const handlePrivacy = (p) => {
-        setProjectPrivacy(p);
-    }
-
-    const [projectType, setProjectType] = useState("Choose the type that best describes your project.");
-
-    const handleType = (t) => {
-        setProjectType(t);
-    }
+    const [projectType, setProjectType] = useState(null);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -290,25 +295,56 @@ const addProjectHelper = () => {
         bgColor: selectedColor.bgColor
     });
 
+    const handleType = (type) => {
+        setProjectType(type);
+    }
+
+    const handlePrivacy = (privacy) => {
+        setProjectPrivacy(privacy);
+    }
+
     const handleClickIcon = (i) => {
         const icon = icons.find((item) => {
             return item.id === i;
         });
-        console.log(icon)
+        // console.log(icon)
         setSelectedIcon({
             ...icon,
-            color: selectedColor.color,
-            bgColor: selectedColor.bgColor
-        })
+            ...selectedColor
+        });
     }
 
     const handleCircleClr = (clr, bgClr) => {
-        console.log(clr, bgClr)
+        // console.log(clr, bgClr)
         setSelectedColor({
             color: clr,
             bgColor: bgClr
-        })
+        });
+        setSelectedIcon((prev) => ({
+            ...prev,
+            color: clr,
+            bgColor: bgClr,
+        }));
     }
+
+    useEffect(() => {
+        setFormValue((prev) => ({
+            ...prev,
+            projectIcon: {
+                ...selectedIcon
+            },
+            projectType: {
+                ...projectType
+            },
+            projectPrivacy: {
+                ...projectPrivacy
+            },
+            projectColor: {
+                ...selectedColor
+            }
+        }))
+    }, [selectedColor, selectedIcon, projectType, projectPrivacy])
+    // console.log(formValue)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -325,6 +361,9 @@ const addProjectHelper = () => {
         if (projectStore.addProjectSuccess) {
             setFormValue(initialState);
             setErrors({});
+            alert("Project created successfully");
+        } else {
+            alert("Something went wrong.")
         }
     }, [projectStore.addProjectSuccess]);
 

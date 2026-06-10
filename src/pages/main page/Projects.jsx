@@ -10,7 +10,7 @@ const Projects = () => {
 
 
 
-    const { handleChange, handleSubmit, errors, formValue, projects, projectStore, projectPrivacy, handlePrivacy, projectType, handleType, selectedColor, setSelectedColor, selectedIcon, setSelectedIcon, handleCircleClr, handleClickIcon, icons, colors, privacy, projectTypeTemp} = addProjectHelper();
+    const { handleChange, handleSubmit, errors, formValue, projects, projectStore, projectPrivacy, handlePrivacy, projectType, handleType, selectedColor, setSelectedColor, selectedIcon, setSelectedIcon, handleCircleClr, handleClickIcon, icons, colors, privacy, projectTypeTemp } = addProjectHelper();
 
     return (
         <>
@@ -145,11 +145,11 @@ const Projects = () => {
                                                     <label htmlFor="projectType" className={`${Styles.form_label} mb-3`}>Project Type</label>
                                                     <div className={`dropdown  ${Styles.dropdown} bg-white`} id='projectType'>
                                                         <div className={`dropdown-toggle ${Styles.dropdown_toggle} overflow-hidden p-1`} data-bs-toggle="dropdown" aria-expanded="false">
-                                                            {projectType}
+                                                            {projectType?.name || "Choose the type that best describes your project."}
                                                         </div>
                                                         <ul className={`dropdown-menu ${Styles.dropdown_menu} w-100`}>
                                                             {projectTypeTemp.map((type) => (
-                                                                <li className={`dropdown-item ${Styles.dropdown_item}`} key={type.id} onClick={() => handleType(type.name)}>
+                                                                <li className={`dropdown-item ${Styles.dropdown_item}`} key={type.id} onClick={() => handleType(type)}>
                                                                     <div className="row">
                                                                         <div className="col-1 align-content-center"><i className={`${type.iconClass} ${Styles.icon}`}></i></div>
                                                                         <div className="col-11">
@@ -237,20 +237,20 @@ const Projects = () => {
                                                     <label htmlFor="projectPrivacy" className={`${Styles.form_label} mb-3`}>Privacy</label>
                                                     <div className={`dropdown  ${Styles.dropdown} bg-white`} id='projectPrivacy'>
                                                         <div className={`dropdown-toggle ${Styles.dropdown_toggle_second} overflow-hidden p-1`} data-bs-toggle="dropdown" aria-expanded="false">
-                                                            {projectPrivacy}
+                                                            {projectPrivacy?.name || "Choose who can view and access the project."}
                                                         </div>
                                                         {errors.projectPrivacy && (
                                                             <span className="text-danger">{errors.projectPrivacy}</span>
                                                         )}
                                                         <ul className={`dropdown-menu ${Styles.dropdown_menu} w-100`}>
                                                             {/* map li  */}
-                                                            {privacy.map((item) => (
-                                                                <li className={`dropdown-item ${Styles.dropdown_item}`} key={item.id} onClick={() => handlePrivacy(item.name)}>
+                                                            {privacy.map((privacy) => (
+                                                                <li className={`dropdown-item ${Styles.dropdown_item}`} key={privacy.id} onClick={() => handlePrivacy(privacy)}>
                                                                     <div className="row">
-                                                                        <div className="col-1 align-content-center"><i className={`${item.iconClass} ${Styles.icon}`}></i></div>
+                                                                        <div className="col-1 align-content-center"><i className={`${privacy.iconClass} ${Styles.icon}`}></i></div>
                                                                         <div className="col-11">
-                                                                            <span className={`${Styles.privacy_type}`}>{item.name}</span><br />
-                                                                            <span className={`${Styles.type_description} text-muted`}>{item.description}</span>
+                                                                            <span className={`${Styles.privacy_type}`}>{privacy.name}</span><br />
+                                                                            <span className={`${Styles.type_description} text-muted`}>{privacy.description}</span>
                                                                         </div>
                                                                     </div>
                                                                 </li>
