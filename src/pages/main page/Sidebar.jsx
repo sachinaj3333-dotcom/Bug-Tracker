@@ -1,42 +1,82 @@
 import React from 'react'
 import Styles from "../../styles/main page components/Sidebar.module.css";
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import profileimage from "../../assets/profile.webp";
+import { patch } from '@mui/material';
+import { decodeToken } from '../../utils/tokenUtil.js';
 
-const Sidebar = () => {
+const Sidebar = ({ activeTab, setActiveTab }) => {
+
+    const menuItems = [
+        {
+            id: "dashboard", label: "Dashboard", icon: "bi bi-house", path: "/dashboard"
+        },
+        {
+            id: "project", label: "Projects", icon: "bi bi-folder2", path: "/projects"
+        },
+        {
+            id: "tasks", label: "Tasks", icon: "bi bi-check-square", path: "/tasks"
+        },
+        {
+            id: "board", label: "Board", icon: "bi bi-kanban", path: "/board"
+        },
+    ];
+
+    const currentUser = decodeToken();
+
     return (
-        <aside className={`${Styles.sidebar}`}>
+        <aside className={`${Styles.sidebar} d-flex flex-column`}>
             <p className={`${Styles.app_name}`}>Snapbug</p>
             <ul className={`${Styles.sidebar_menu_list}`}>
-                <Link className={`${Styles.sidebar_menu_item}`} to={"/"}>
-                    <li className={`${Styles.sidebar_menu_name} mx-3`}>
-                        <span className='d-inline-flex align-items-center'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-house me-2" viewBox="0 0 16 16">
-                            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
-                        </svg>
-                            Dashboard</span>
-                    </li>
-                </Link>
-                <Link className={`${Styles.sidebar_menu_item}`} to={"/projects"}>
-                    <li className={`${Styles.sidebar_menu_name} mx-3`}>
-                        <span className='d-inline-flex align-items-center'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-folder2 me-2" viewBox="0 0 16 16">
-                            <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5z" />
-                        </svg>
-                            Projects</span></li>
-                </Link>
-                <Link className={`${Styles.sidebar_menu_item}`} to={"/tasks"}>
-                    <li className={`${Styles.sidebar_menu_name} mx-3`}>
-                        <span className='d-inline-flex align-items-center'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-check-square me-2" viewBox="0 0 16 16">
-                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-                            <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z" />
-                        </svg>Tasks</span></li>
-                </Link>
-                <Link className={`${Styles.sidebar_menu_item}`} to={"/board"}>
-                    <li className={`${Styles.sidebar_menu_name} mx-3`}>
-                        <span className='d-inline-flex align-items-center'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-kanban me-2" viewBox="0 0 16 16">
-                            <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-                            <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1z" />
-                        </svg>Board</span></li>
-                </Link>
+
+                {
+                    menuItems.map((item) => (
+                        <div key={item.id}>
+
+                            <Link to={item.path}>
+                                <li className={` mx-3 p-0 mb-3`} onClick={() => setActiveTab(item.path)}>
+
+                                    <button className={` btn w-100 text-start ${Styles.menuname} ${activeTab === item.path ? Styles.menuitem : ""}`}>
+                                        <span><i className={item.icon}></i></span>
+                                        <span className='ms-2'>{item.label}</span>
+                                    </button>
+                                </li>
+                            </Link>
+                        </div>
+                    ))
+                }
             </ul>
+            <div className={`${Styles.profile} mt-auto mb-5`}>
+                <div className="row m-0">
+                    <div className="col-4 text-center">
+                        <img src={profileimage} alt="image" height={50} width={50} style={{ borderRadius: "100%" }} />
+                    </div>
+                    <div className="col-8 p-0 align-items-center">
+                        <div className={`${Styles.user_info}`}>
+                            <div className={`dropup ${Styles.dropup}`}>
+                                <div className={`dropdown-toggle ${Styles.toggle_btn}`} data-bs-toggle="dropdown" aria-expanded="false">
+                                    <p className={`${Styles.user_name} mb-0`}>{currentUser.name.split(" ")[0]}</p>
+                                    <p className={`${Styles.user_email} mb-0 text-muted`}>{currentUser.email}</p>
+                                </div>
+                                <ul className="dropdown-menu p-2">
+                                    <li className={`${Styles.dropup_item}`}>
+                                        <i className="bi bi-person me-2 fs-6"></i><span>My Profile</span>
+                                    </li>
+                                    <li className={`${Styles.dropup_item}`}>
+                                        <i className="bi bi-gear me-2 fs-6"></i><span>Account Setting</span>
+                                    </li>
+                                    <li className={`${Styles.dropup_item}`}>
+                                        <i className="bi bi-question-circle me-2 fs-6"></i><span>Help & Support</span>
+                                    </li>
+                                    <li className={`${Styles.logout}`}>
+                                        <i className="bi bi-box-arrow-right me-2 fs-6"></i><span>Logout</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </aside>
     )
 }

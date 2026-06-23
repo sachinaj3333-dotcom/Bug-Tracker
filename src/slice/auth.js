@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { signInUser, signUpUser } from "../services/auth-api"
+import { getAuthData, signInUser, signUpUser } from "../services/auth-api.js";
+import { safelyDecodeToken } from "../utils/auth.js";
+import { isAuthenticated } from "../utils/tokenUtil.js";
 
 
 
@@ -11,11 +13,16 @@ const initialState = {
     message: null,
     status: null,
 }
-
 const authSlice = createSlice({
     name: "auth",
     initialState,
-    reducers: {},
+    reducers: {
+        logout: (state) => {
+            localStorage.removeItem("authToken");
+            state.token = null;
+            state.user = null;
+        },
+    },
     extraReducers: (builder) => {
         builder
             // Sign in
@@ -51,7 +58,27 @@ const authSlice = createSlice({
                 state.error = action.payload.error || "Sign up failed";
                 state.message = action.payload.message || "Try again";
             })
-    }
-})
 
+            // getauthdata
+            .addCase(getAuthData.pending, (state) => {
+                state.loading = true;
+                state.error = null;
+            })
+            .addCase(getAuthData.fulfilled, (state, action) => {
+                state.loading = false;
+                const token = action.payload.token;
+                state.token = token;
+
+                const decodedUser = safelyDecodeToken(token);
+
+                if (decodedUser) {
+                    state.user = decodedUser;
+                } else {
+                    state.error = "Invalid token received.";
+                }
+            });
+    },
+});
+
+export const {logout} = authSlice.actions;
 export default authSlice.reducer;
