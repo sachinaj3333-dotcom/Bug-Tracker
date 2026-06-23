@@ -553,7 +553,7 @@ const Tasks = () => {
               </div>
               <div className="modal-footer">
                 <button type="button" className={`btn ${Styles.cancel_btn}`} data-bs-dismiss="modal">Cancel</button>
-                <button type="button" className={`btn ${Styles.create_task_btn}`}><i class="bi bi-send"></i> Create Project</button>
+                <button type="button" className={`btn ${Styles.create_task_btn}`}><i className="bi bi-send"></i> Create Project</button>
               </div>
             </div>
           </div>

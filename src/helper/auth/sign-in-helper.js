@@ -1,12 +1,12 @@
-import { useState } from "react"
-import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { signInUser } from "../../services/auth-api";
 
 
 const initialState = {
-    userEmail: "",
-    userPass: "",
+    userEmail: "neel@gmail.com",
+    userPass: "123456789",
 }
 
 const signInHelper = () => {
@@ -14,6 +14,9 @@ const signInHelper = () => {
     const [errors, setErrors] = useState({});
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const authStore = useSelector((state) => state.auth);
+    console.log(authStore);
+    
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -43,11 +46,17 @@ const signInHelper = () => {
         if (isValid) {
             dispatch(signInUser(formValue));
             setFormValue(initialState);
-            navigate("/")
         } else {
             // add toaster
         }
     }
+
+    useEffect(() => {
+        if (authStore.status === 200) {
+            navigate("/dashboard")
+
+        }
+    },[authStore])
 
     return {
         handleChange,

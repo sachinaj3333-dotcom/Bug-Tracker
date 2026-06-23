@@ -18,7 +18,7 @@ const Dashboardcard = () => {
                         <div className={`${Styles.card_body} mt-3`}>
                             {
                                 [0, 1, 2, 3].map((item) => (
-                                    <div className={`row g-0  mb-2 ${Styles.card_content}`}>
+                                    <div className={`row g-0  mb-2 ${Styles.card_content} mb-3`}>
                                         <div className="col-6">
                                             <p className={`${Styles.project_name} mb-0`}>Sanpbug Website</p>
                                             <p className={`${Styles.project_type} text-muted mb-0`}>Web Development</p>
@@ -65,7 +65,7 @@ const Dashboardcard = () => {
                         <div className={`${Styles.head}`}>
                             <span className={`${Styles.card_name}`}>Activity Feed</span> <Link className={`${Styles.view_all}`}><span>View all</span></Link>
                         </div>
-                        <div className={`${Styles.card_body} mt-3`}>
+                        <div className={`${Styles.card_body} mt-3 overflow-auto`}>
                             {
                                 [0, 1, 2, 3].map((item) => (
                                     <div className={`row g-0  mb-2 ${Styles.card_content}`}>

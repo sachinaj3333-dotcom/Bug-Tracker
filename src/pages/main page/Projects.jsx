@@ -89,7 +89,9 @@ const Projects = () => {
                                                         <span id='projectIcon' className={`${Styles.project_icon} text-center align-content-center`} data-bs-toggle="dropdown" aria-expanded="false"><i className="bi bi-three-dots"></i></span>
                                                         <div className={`dropdown-menu ${Styles.icon_dropupmenu} pt-4 px-3`}>
                                                             {icons.slice(7).map((picon) => (
-                                                                <span id='projectIcon' className={`${Styles.project_icon} me-2 d-inline-block mb-3 text-center align-content-center`} onClick={() => { handleClickIcon(picon.id) }} key={picon.id}><i className={`${picon.class}`}></i></span>
+                                                                <span id='projectIcon' className={`${Styles.project_icon} me-2 d-inline-block mb-3 text-center align-content-center`} style={{ backgroundColor: selectedIcon?.id === picon.id ? selectedColor.bgColor : "" }} onClick={() => { handleClickIcon(picon.id) }} key={picon.id}><i style={{
+                                                                    color: selectedIcon?.id === picon.id ? selectedColor.color : "",
+                                                                }} className={`${picon.iconClass}`}></i></span>
                                                             ))}
                                                         </div>
                                                     </span>

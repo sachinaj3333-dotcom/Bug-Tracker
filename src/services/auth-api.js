@@ -8,7 +8,7 @@ import axios from "axios";
 
 export const signInUser = createAsyncThunk(
     "auth/signInUser", async (values, thunkApi) => {
-        try{
+        try {
             const url = `${import.meta.env.VITE_LOCAL_URL}/${EndPoints.SignInApi}`;
             const { data } = await axios.post(url, values, getApiConfig());
 
@@ -17,7 +17,7 @@ export const signInUser = createAsyncThunk(
                 localStorage.setItem('authToken', data.token);
                 return thunkApi.fulfillWithValue(data);
             }
-        }catch (error) {
+        } catch (error) {
             return thunkApi.rejectWithValue(error);
         }
     }
@@ -27,13 +27,29 @@ export const signInUser = createAsyncThunk(
 
 export const signUpUser = createAsyncThunk(
     "auth/signUpUser", async (values, thunkApi) => {
-        try{
+        try {
             const url = `${import.meta.env.VITE_LOCAL_URL}/${EndPoints.SignUpApi}`;
             const { data } = await axios.post(url, values, getApiConfig());
             if (data.status === 201) {
                 return thunkApi.fulfillWithValue(data);
             }
-        }catch (error) {
+        } catch (error) {
+            return thunkApi.rejectWithValue(error);
+        }
+    }
+)
+
+// Auth data
+
+export const getAuthData = createAsyncThunk(
+    "auth/getAuthData", async (values, thunkApi) => {
+        try {
+            const url = `${import.meta.env.VITE_LOCAL_URL}/${EndPoints.getAuthDataApi}`;
+            const { data } = await axios.get(url, values, getApiConfig());
+            if (data.status === 201) {
+                return thunkApi.fulfillWithValue(data);
+            }
+        } catch (error) {
             return thunkApi.rejectWithValue(error);
         }
     }
